@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleDoulabi - Digital Wardrobe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon">SD</div>
+                <div class="logo-text">
+                    <h2>StyleDoulabi</h2>
+                    <span>Digital Wardrobe</span>
+                </div>
+            </div>
+
+            <ul class="menu-list">
+                <li class="active">
+                    <a href="#" onclick="scrollToSec('top-dashboard')">
+                        <i class="fa-solid fa-house"></i> Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#wardrobe" onclick="scrollToSec('wardrobe')">
+                        <i class="fa-solid fa-shirt"></i> My Wardrobe
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#add-item" onclick="scrollToSec('add-item')">
+                        <i class="fa-solid fa-plus"></i> Add New
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#matcher" onclick="scrollToSec('matcher')">
+                        <i class="fa-solid fa-palette"></i> Color Matcher
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#outfit" onclick="scrollToSec('outfit')">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Outfit Suggestion
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#weather" onclick="scrollToSec('weather')">
+                        <i class="fa-solid fa-cloud-sun"></i> Weather
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#profile" onclick="scrollToSec('profile')">
+                        <i class="fa-solid fa-user"></i> Profile
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <small>© 2026 StyleDoulabi</small>
+                <small>All rights reserved.</small>
+
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-container" id="top-dashboard">
+
+            <!-- Top Header -->
+            <div class="top-bar">
+
+                <div class="welcome-box">
+                    <span class="dash-tag">DASHBOARD</span>
+
+                    <h1>Welcome to StyleDoulabi! 👋</h1>
+
+                    <p>
+                        Here's what's happening with your wardrobe today.
+                    </p>
+                </div>
+
+                <div class="date-time-box">
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        May 18, 2026
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        10:35 AM
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Row 1 -->
+            <div class="grid-row-1">
+
+                <div class="promo-banner">
+
+                    <div class="promo-text">
+
+                        <span class="sub-tag">
+                            ALWAYS YOUR STYLE
+                        </span>
+
+                        <h2>
+                            Your style,<br>
+                            your story.
+                        </h2>
+
+                        <p>
+                            Discover the perfect outfits from your collection and feel confident every day.
+                        </p>
+
+                        <button
+                            class="explore-btn"
+                            onclick="scrollToSec('wardrobe')">
+                            Explore Wardrobe
+                        </button>
+
+                    </div>
+
+                    <div class="promo-img">
+                        <span class="dress-emoji">👗</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Weather -->
+                <div class="weather-widget" id="weather">
+
+                    <div class="weather-main">
+
+                        <div class="temp-left">
+
+                            <i class="fa-solid fa-cloud-sun"></i>
+
+                            <div>
+                                <h2>28°</h2>
+                                <p>Partly Cloudy</p>
+                                <small>Cairo, Egypt</small>
+                            </div>
+
+                        </div>
+
+                        <div class="temp-right">
+
+                            <p>
+                                Humidity: <strong>67%</strong>
+                            </p>
+
+                            <p>
+                                Wind: <strong>14 km/h</strong>
+                            </p>
+
+                            <p>
+                                Precipitation: <strong>20%</strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="weather-days">
+
+                        <div class="d-box">
+                            <span>Sun</span>
+                            <i class="fa-solid fa-sun"></i>
+                            <p>29°</p>
+                        </div>
+
+                        <div class="d-box">
+                            <span>Mon</span>
+                            <i class="fa-solid fa-cloud"></i>
+                            <p>28°</p>
+                        </div>
+
+                        <div class="d-box">
+                            <span>Tue</span>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <p>27°</p>
+                        </div>
+
+                        <div class="d-box">
+                            <span>Wed</span>
+                            <i class="fa-solid fa-sun"></i>
+                            <p>30°</p>
+                        </div>
+
+                        <div class="d-box">
+                            <span>Thu</span>
+                            <i class="fa-solid fa-cloud"></i>
+                            <p>26°</p>
+                        </div>
+
+                        <div class="d-box">
+                            <span>Fri</span>
+                            <i class="fa-solid fa-sun"></i>
+                            <p>31°</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Row 2 -->
+            <div class="grid-row-2">
+
+                <!-- Wardrobe -->
+                <div class="card-box wardrobe-card" id="wardrobe">
+
+                    <div class="box-header">
+
+                        <h3>
+                            <i class="fa-solid fa-shirt"></i>
+                            My Wardrobe
+                        </h3>
+
+                        <span
+                            class="view-all-link"
+                            onclick="loadWardrobeItems()">
+                            View All
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="wardrobe-items-grid"
+                        id="wardrobe-grid">
+                    </div>
+
+                </div>
+
+
+                <!-- Add Item -->
+                <div class="card-box add-card" id="add-item">
+
+                    <div class="box-header">
+
+                        <h3>
+                            <i class="fa-solid fa-plus"></i>
+                            Add New Item
+                        </h3>
+
+                    </div>
+
+                    <form
+                        id="add-form"
+                        onsubmit="handleAddItem(event)">
+
+                        <div class="form-grid-2">
+
+                            <div class="f-group">
+
+                                <label>Item Name</label>
+
+                                <input
+                                    type="text"
+                                    id="iName"
+                                    placeholder="e.g. White Shirt"
+                                    required>
+
+                            </div>
+
+
+                            <div class="f-group">
+
+                                <label>Category</label>
+
+                                <select id="iCategory" required>
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="Top">
+                                        Top
+                                    </option>
+
+                                    <option value="Bottom">
+                                        Bottom
+                                    </option>
+
+                                    <option value="Shoes">
+                                        Shoes
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="f-group">
+
+                                <label>Color</label>
+
+                                <input
+                                    type="text"
+                                    id="iColor"
+                                    placeholder="e.g. White"
+                                    required>
+
+                            </div>
+
+
+                            <div class="f-group">
+
+                                <label>Season</label>
+
+                                <select id="iSeason" required>
+
+                                    <option value="">
+                                        Select season
+                                    </option>
+
+                                    <option value="Summer">
+                                        Summer
+                                    </option>
+
+                                    <option value="Winter">
+                                        Winter
+                                    </option>
+
+                                    <option value="Spring">
+                                        Spring
+                                    </option>
+
+                                    <option value="Autumn">
+                                        Autumn
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="f-group full">
+
+                                <label>Image</label>
+
+                                <input
+                                    type="file"
+                                    id="iImage"
+                                    accept="image/*"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="submit-btn">
+                            Add Item
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Row 3 -->
+            <div class="grid-row-3">
+
+                <!-- Color Matcher -->
+                <div class="card-box" id="matcher">
+
+                    <div class="box-header">
+
+                        <h3>
+                            <i class="fa-solid fa-palette"></i>
+                            Color Matcher
+                        </h3>
+
+                    </div>
+
+                    <div class="matcher-inputs">
+
+                        <input
+                            type="text"
+                            id="c1"
+                            placeholder="First color">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                        <input
+                            type="text"
+                            id="c2"
+                            placeholder="Second color">
+
+                    </div>
+
+                    <button
+                        class="submit-btn"
+                        onclick="checkColorMatch()">
+                        Check Match
+                    </button>
+
+                    <div
+                        id="match-out"
+                        class="match-output">
+                    </div>
+
+                </div>
+
+
+                <!-- Outfit Suggestions -->
+                <div class="card-box" id="outfit">
+
+                    <div class="box-header">
+
+                        <h3>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Outfit Suggestions
+                        </h3>
+
+                        <span
+                            class="view-all-link"
+                            onclick="getOutfit()">
+                            View More
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="outfit-display-area"
+                        id="outfit-area">
+
+                        <p class="empty-hint">
+                            Click View More to load matching outfit
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Profile -->
+                <div class="card-box" id="profile">
+
+                    <div class="box-header">
+
+                        <h3>
+                            <i class="fa-solid fa-user"></i>
+                            Profile Overview
+                        </h3>
+
+                    </div>
+
+                    <div
+                        class="profile-content"
+                        id="profile-box">
+
+                        <div class="user-avatar">
+                            S
+                        </div>
+
+                        <div class="user-details">
+
+                            <p>
+                                <strong>Name:</strong>
+                                StyleDoulabi User
+                            </p>
+
+                            <p>
+                                <strong>Email:</strong>
+                                user@styledoulabi.com
+                            </p>
+
+                            <p>
+                                <strong>Location:</strong>
+                                Cairo, Egypt
+                            </p>
+
+                            <p>
+                                <strong>Member Since:</strong>
+                                March 12, 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        const DEFAULT_DRESS_IMAGE =
+            'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80';
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadWardrobeItems();
+            loadProfileData();
+        });
+
+
+        async function loadWardrobeItems() {
+
+            try {
+
+                const res = await fetch('/api/wardrobe');
+                const items = await res.json();
+                const grid = document.getElementById('wardrobe-grid');
+
+                grid.innerHTML = '';
+
+                if (!items || items.length === 0) {
+                    grid.innerHTML = '<p class="empty-hint">No items added yet.</p>';
+                    return;
+                }
+
+                items.forEach(item => {
+
+                    const img = item.image
+                        ? `/static/uploads/${item.image}`
+                        : DEFAULT_DRESS_IMAGE;
+
+                    grid.innerHTML += `
+                        <div class="ward-item">
+                            <img src="${img}" alt="${item.name}">
+                            <h4>${item.name}</h4>
+                            <div class="item-details">
+                                <span class="detail-tag category">${item.category || 'N/A'}</span>
+                                <span class="detail-tag color">${item.color || 'N/A'}</span>
+                                <span class="detail-tag season">${item.season || 'N/A'}</span>
+                            </div>
+                            <i class="fa-solid fa-trash delete-icon" onclick="removeItem('${item.name}')"></i>
+                        </div>
+                    `;
+
+                });
+
+            } catch (err) {
+                console.log("Error loading wardrobe items", err);
+            }
+
+        }
+
+
+        async function handleAddItem(e) {
+
+            e.preventDefault();
+
+            const form = new FormData();
+            form.append('name', document.getElementById('iName').value);
+            form.append('category', document.getElementById('iCategory').value);
+            form.append('color', document.getElementById('iColor').value);
+            form.append('season', document.getElementById('iSeason').value);
+            form.append('image', document.getElementById('iImage').files[0]);
+
+            try {
+
+                const res = await fetch('/api/wardrobe', {
+                    method: 'POST',
+                    body: form
+                });
+
+                const data = await res.json();
+                document.getElementById('add-form').reset();
+                loadWardrobeItems();
+
+            } catch (err) {
+                console.log("Error adding item", err);
+            }
+
+        }
+
+
+        async function removeItem(name) {
+
+            try {
+
+                const res = await fetch(`/api/wardrobe/${name}`, {
+                    method: 'DELETE'
+                });
+
+                const data = await res.json();
+                loadWardrobeItems();
+
+            } catch (err) {
+                console.log("Error deleting item", err);
+            }
+
+        }
+
+
+        async function checkColorMatch() {
+
+            const color1 = document.getElementById('c1').value;
+            const color2 = document.getElementById('c2').value;
+
+            try {
+
+                const res = await fetch('/api/match', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ color1, color2 })
+                });
+
+                const data = await res.json();
+                const out = document.getElementById('match-out');
+
+                out.innerHTML = data.match
+                    ? '<span class="match-ok">✔ Great Match! Colors fit together.</span>'
+                    : '<span class="match-no">✖ Not a good match.</span>';
+
+            } catch (err) {
+                console.log("Error checking match", err);
+            }
+
+        }
+
+
+        /* =========================
+           UPDATED OUTFIT FUNCTION
+           ========================= */
+
+        async function getOutfit() {
+
+            const area = document.getElementById('outfit-area');
+            area.innerHTML = '<p class="empty-hint">Loading matching outfit...</p>';
+
+            try {
+
+                const res = await fetch('/api/outfit');
+
+                if (!res.ok) {
+                    throw new Error(`Server returned status: ${res.status}`);
+                }
+
+                const outfit = await res.json();
+
+                if (!outfit || !outfit.top || !outfit.bottom || !outfit.shoes) {
+                    area.innerHTML = '<p class="empty-hint">No matching outfit found for the current season.</p>';
+                    return;
+                }
+
+                const getImgSrc = (img) => img ? `/static/uploads/${img}` : DEFAULT_DRESS_IMAGE;
+
+                area.innerHTML = `
+                    <div class="outfit-row">
+
+                        <div class="o-piece">
+                            <img src="${getImgSrc(outfit.top.image)}" alt="${outfit.top.name || ''}">
+                            <p>${outfit.top.name || 'Top'}</p>
+                        </div>
+
+                        <div class="o-piece">
+                            <img src="${getImgSrc(outfit.bottom.image)}" alt="${outfit.bottom.name || ''}">
+                            <p>${outfit.bottom.name || 'Bottom'}</p>
+                        </div>
+
+                        <div class="o-piece">
+                            <img src="${getImgSrc(outfit.shoes.image)}" alt="${outfit.shoes.name || ''}">
+                            <p>${outfit.shoes.name || 'Shoes'}</p>
+                        </div>
+
+                    </div>
+                `;
+
+            } catch (err) {
+                console.error("Error fetching outfit from backend:", err);
+                area.innerHTML = '<p class="empty-hint" style="color: #e74c3c;">Error loading outfit suggestion. Please try again.</p>';
+            }
+
+        }
+
+
+        /* =========================
+           SCROLL & PROFILE HELPERS
+           ========================= */
+
+        function scrollToSec(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+
+        async function loadProfileData() {
+
+            try {
+
+                const res = await fetch('/api/profile');
+                const data = await res.json();
+
+                const profileBox = document.getElementById('profile-box');
+
+                if (profileBox) {
+                    profileBox.innerHTML = `
+                        <div class="user-avatar">${(data.name || 'S')[0].toUpperCase()}</div>
+                        <div class="user-details">
+                            <p><strong>Name:</strong> ${data.name}</p>
+                            <p><strong>Email:</strong> ${data.email}</p>
+                            <p><strong>Age:</strong> ${data.age}</p>
+                            <p><strong>Fav Color:</strong> ${data.fav_color}</p>
+                            <p><strong>Fav Season:</strong> ${data.fav_season}</p>
+                        </div>
+                    `;
+                }
+
+            } catch (err) {
+                console.log("Error loading profile data", err);
+            }
+
+        }
+
+    </script>
+</body>
+</html>
