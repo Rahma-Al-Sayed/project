@@ -41,8 +41,10 @@ def item_to_dict(item):
     """
     if isinstance(item, dict):
         return item
+
     if hasattr(item, "__dict__"):
         return item.__dict__
+
     return {
         "name": getattr(item, "name", ""),
         "category": getattr(item, "category", ""),
@@ -54,7 +56,7 @@ def item_to_dict(item):
 
 
 # =========================
-# Home Page (index.html من المجلد الرئيسي مباشرة)
+# Home Page
 # =========================
 
 @app.route("/")
@@ -116,14 +118,17 @@ def add_item():
 
     if "image" in request.files:
         file = request.files["image"]
+
         if file and file.filename != "":
             filename = secure_filename(file.filename)
+
             file.save(
                 os.path.join(
                     app.config["UPLOAD_FOLDER"],
                     filename
                 )
             )
+
             image_filename = filename
 
     item = ClothingItem(
@@ -160,9 +165,14 @@ def remove_item(name):
 
     for item in my_wardrobe.clothes_list:
 
-        item_name = item.get("name") if isinstance(item, dict) else getattr(item, "name", None)
+        item_name = (
+            item.get("name")
+            if isinstance(item, dict)
+            else getattr(item, "name", None)
+        )
 
         if item_name == name:
+
             my_wardrobe.clothes_list.remove(item)
             my_wardrobe.save()
 
@@ -181,6 +191,7 @@ def remove_item(name):
 
 @app.route("/api/weather", methods=["GET"])
 def get_weather():
+
     return jsonify({
         "temperature": my_weather.temperature(),
         "season": my_weather.season()
@@ -197,13 +208,17 @@ def match_colors():
     data = request.get_json()
 
     if not data:
-        return jsonify({"match": False})
+        return jsonify({
+            "match": False
+        })
 
     color1 = data.get("color1", "")
     color2 = data.get("color2", "")
 
     if not color1 or not color2:
-        return jsonify({"match": False})
+        return jsonify({
+            "match": False
+        })
 
     result = matcher.is_match(
         color1,
@@ -249,11 +264,35 @@ def get_profile():
     current_user.load_user()
 
     return jsonify({
-        "name": getattr(current_user, "name", None) or "StyleDoulabi User",
-        "email": getattr(current_user, "email", None) or "user@style.com",
-        "age": getattr(current_user, "age", None) or "",
-        "fav_color": getattr(current_user, "fav_color", None) or "N/A",
-        "fav_season": getattr(current_user, "fav_season", None) or "N/A"
+        "name": getattr(
+            current_user,
+            "name",
+            None
+        ) or "StyleDoulabi User",
+
+        "email": getattr(
+            current_user,
+            "email",
+            None
+        ) or "user@style.com",
+
+        "age": getattr(
+            current_user,
+            "age",
+            None
+        ) or "",
+
+        "fav_color": getattr(
+            current_user,
+            "fav_color",
+            None
+        ) or "N/A",
+
+        "fav_season": getattr(
+            current_user,
+            "fav_season",
+            None
+        ) or "N/A"
     })
 
 
