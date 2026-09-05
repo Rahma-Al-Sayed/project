@@ -1,111 +1,216 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>StyleDoulabi - Digital Wardrobe</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-```
 <div class="dashboard-layout">
 
     <!-- Sidebar -->
     <aside class="sidebar">
+
         <div class="logo-area">
-            <div class="logo-icon">SD</div>
-            <div class="logo-text">
-                <h2>StyleDoulabi</h2>
-                <span>Digital Wardrobe</span>
+
+            <div class="logo-icon">
+                SD
             </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    StyleDoulabi
+                </h2>
+
+                <span>
+                    Digital Wardrobe
+                </span>
+
+            </div>
+
         </div>
+
 
         <ul class="menu-list">
+
             <li class="active">
-                <a href="#" onclick="scrollToSec('top-dashboard'); return false;">
-                    <i class="fa-solid fa-house"></i> Dashboard
+
+                <a href="#"
+                   onclick="scrollToSec('top-dashboard'); return false;">
+
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+
                 </a>
+
             </li>
 
-            <li>
-                <a href="#wardrobe" onclick="scrollToSec('wardrobe'); return false;">
-                    <i class="fa-solid fa-shirt"></i> My Wardrobe
-                </a>
-            </li>
 
             <li>
-                <a href="#add-item" onclick="scrollToSec('add-item'); return false;">
-                    <i class="fa-solid fa-plus"></i> Add New
+
+                <a href="#wardrobe"
+                   onclick="scrollToSec('wardrobe'); return false;">
+
+                    <i class="fa-solid fa-shirt"></i>
+                    My Wardrobe
+
                 </a>
+
             </li>
 
-            <li>
-                <a href="#matcher" onclick="scrollToSec('matcher'); return false;">
-                    <i class="fa-solid fa-palette"></i> Color Matcher
-                </a>
-            </li>
 
             <li>
-                <a href="#outfit" onclick="scrollToSec('outfit'); return false;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Outfit Suggestion
+
+                <a href="#add-item"
+                   onclick="scrollToSec('add-item'); return false;">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add New
+
                 </a>
+
             </li>
 
-            <li>
-                <a href="#weather" onclick="scrollToSec('weather'); return false;">
-                    <i class="fa-solid fa-cloud-sun"></i> Weather
-                </a>
-            </li>
 
             <li>
-                <a href="#profile" onclick="scrollToSec('profile'); return false;">
-                    <i class="fa-solid fa-user"></i> Profile
+
+                <a href="#matcher"
+                   onclick="scrollToSec('matcher'); return false;">
+
+                    <i class="fa-solid fa-palette"></i>
+                    Color Matcher
+
                 </a>
+
             </li>
+
+
+            <li>
+
+                <a href="#outfit"
+                   onclick="scrollToSec('outfit'); return false;">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Outfit Suggestion
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#weather"
+                   onclick="scrollToSec('weather'); return false;">
+
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    Weather
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#profile"
+                   onclick="scrollToSec('profile'); return false;">
+
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+
+                </a>
+
+            </li>
+
         </ul>
 
+
         <div class="sidebar-footer">
-            <small>© 2026 StyleDoulabi</small>
-            <small>All rights reserved.</small>
+
+            <small>
+                © 2026 StyleDoulabi
+            </small>
+
+            <small>
+                All rights reserved.
+            </small>
+
 
             <div class="social-icons">
+
                 <i class="fa-brands fa-facebook-f"></i>
+
                 <i class="fa-brands fa-instagram"></i>
+
                 <i class="fa-brands fa-twitter"></i>
+
             </div>
+
         </div>
+
     </aside>
 
 
     <!-- Main Content -->
     <main class="main-container" id="top-dashboard">
 
+
         <!-- Top Header -->
         <div class="top-bar">
 
             <div class="welcome-box">
-                <span class="dash-tag">DASHBOARD</span>
 
-                <h1>Welcome to StyleDoulabi! 👋</h1>
+                <span class="dash-tag">
+                    DASHBOARD
+                </span>
+
+                <h1>
+                    Welcome to StyleDoulabi! 👋
+                </h1>
 
                 <p>
                     Here's what's happening with your wardrobe today.
                 </p>
+
             </div>
 
+
+            <!-- DATE AND TIME -->
             <div class="date-time-box">
-                <span>
-                    <i class="fa-regular fa-calendar"></i>
-                    May 18, 2026
-                </span>
 
                 <span>
-                    <i class="fa-regular fa-clock"></i>
-                    10:35 AM
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="current-date">
+                        Loading...
+                    </span>
+
                 </span>
+
+
+                <span>
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <span id="current-time">
+                        Loading...
+                    </span>
+
+                </span>
+
             </div>
 
         </div>
@@ -114,6 +219,8 @@
         <!-- Row 1 -->
         <div class="grid-row-1">
 
+
+            <!-- Promo -->
             <div class="promo-banner">
 
                 <div class="promo-text">
@@ -128,19 +235,27 @@
                     </h2>
 
                     <p>
-                        Discover the perfect outfits from your collection and feel confident every day.
+                        Discover the perfect outfits from your collection
+                        and feel confident every day.
                     </p>
 
                     <button
                         class="explore-btn"
                         onclick="scrollToSec('wardrobe')">
+
                         Explore Wardrobe
+
                     </button>
 
                 </div>
 
+
                 <div class="promo-img">
-                    <span class="dress-emoji">👗</span>
+
+                    <span class="dress-emoji">
+                        👗
+                    </span>
+
                 </div>
 
             </div>
@@ -156,25 +271,39 @@
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div>
-                            <h2>28°</h2>
-                            <p>Partly Cloudy</p>
-                            <small>Cairo, Egypt</small>
+
+                            <h2>
+                                28°
+                            </h2>
+
+                            <p>
+                                Partly Cloudy
+                            </p>
+
+                            <small>
+                                Cairo, Egypt
+                            </small>
+
                         </div>
 
                     </div>
 
+
                     <div class="temp-right">
 
                         <p>
-                            Humidity: <strong>67%</strong>
+                            Humidity:
+                            <strong>67%</strong>
                         </p>
 
                         <p>
-                            Wind: <strong>14 km/h</strong>
+                            Wind:
+                            <strong>14 km/h</strong>
                         </p>
 
                         <p>
-                            Precipitation: <strong>20%</strong>
+                            Precipitation:
+                            <strong>20%</strong>
                         </p>
 
                     </div>
@@ -185,39 +314,68 @@
                 <div class="weather-days">
 
                     <div class="d-box">
+
                         <span>Sun</span>
+
                         <i class="fa-solid fa-sun"></i>
+
                         <p>29°</p>
+
                     </div>
 
+
                     <div class="d-box">
+
                         <span>Mon</span>
+
                         <i class="fa-solid fa-cloud"></i>
+
                         <p>28°</p>
+
                     </div>
 
+
                     <div class="d-box">
+
                         <span>Tue</span>
+
                         <i class="fa-solid fa-cloud-sun"></i>
+
                         <p>27°</p>
+
                     </div>
 
+
                     <div class="d-box">
+
                         <span>Wed</span>
+
                         <i class="fa-solid fa-sun"></i>
+
                         <p>30°</p>
+
                     </div>
 
+
                     <div class="d-box">
+
                         <span>Thu</span>
+
                         <i class="fa-solid fa-cloud"></i>
+
                         <p>26°</p>
+
                     </div>
 
+
                     <div class="d-box">
+
                         <span>Fri</span>
+
                         <i class="fa-solid fa-sun"></i>
+
                         <p>31°</p>
+
                     </div>
 
                 </div>
@@ -230,27 +388,36 @@
         <!-- Row 2 -->
         <div class="grid-row-2">
 
+
             <!-- Wardrobe -->
             <div class="card-box wardrobe-card" id="wardrobe">
 
                 <div class="box-header">
 
                     <h3>
+
                         <i class="fa-solid fa-shirt"></i>
+
                         My Wardrobe
+
                     </h3>
+
 
                     <span
                         class="view-all-link"
                         onclick="loadWardrobeItems()">
+
                         View All
+
                     </span>
 
                 </div>
 
+
                 <div
                     class="wardrobe-items-grid"
                     id="wardrobe-grid">
+
                 </div>
 
             </div>
@@ -262,11 +429,15 @@
                 <div class="box-header">
 
                     <h3>
+
                         <i class="fa-solid fa-plus"></i>
+
                         Add New Item
+
                     </h3>
 
                 </div>
+
 
                 <form
                     id="add-form"
@@ -274,9 +445,12 @@
 
                     <div class="form-grid-2">
 
+
                         <div class="f-group">
 
-                            <label>Item Name</label>
+                            <label>
+                                Item Name
+                            </label>
 
                             <input
                                 type="text"
@@ -289,7 +463,9 @@
 
                         <div class="f-group">
 
-                            <label>Category</label>
+                            <label>
+                                Category
+                            </label>
 
                             <select id="iCategory" required>
 
@@ -316,7 +492,9 @@
 
                         <div class="f-group">
 
-                            <label>Color</label>
+                            <label>
+                                Color
+                            </label>
 
                             <input
                                 type="text"
@@ -329,7 +507,9 @@
 
                         <div class="f-group">
 
-                            <label>Season</label>
+                            <label>
+                                Season
+                            </label>
 
                             <select id="iSeason" required>
 
@@ -360,7 +540,9 @@
 
                         <div class="f-group full">
 
-                            <label>Image</label>
+                            <label>
+                                Image
+                            </label>
 
                             <input
                                 type="file"
@@ -376,7 +558,9 @@
                     <button
                         type="submit"
                         class="submit-btn">
+
                         Add Item
+
                     </button>
 
                 </form>
@@ -389,17 +573,22 @@
         <!-- Row 3 -->
         <div class="grid-row-3">
 
+
             <!-- Color Matcher -->
             <div class="card-box" id="matcher">
 
                 <div class="box-header">
 
                     <h3>
+
                         <i class="fa-solid fa-palette"></i>
+
                         Color Matcher
+
                     </h3>
 
                 </div>
+
 
                 <div class="matcher-inputs">
 
@@ -408,7 +597,9 @@
                         id="c1"
                         placeholder="First color">
 
+
                     <i class="fa-solid fa-right-left"></i>
+
 
                     <input
                         type="text"
@@ -417,15 +608,20 @@
 
                 </div>
 
+
                 <button
                     class="submit-btn"
                     onclick="checkColorMatch()">
+
                     Check Match
+
                 </button>
+
 
                 <div
                     id="match-out"
                     class="match-output">
+
                 </div>
 
             </div>
@@ -437,17 +633,24 @@
                 <div class="box-header">
 
                     <h3>
+
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
+
                         Outfit Suggestions
+
                     </h3>
+
 
                     <span
                         class="view-all-link"
                         onclick="getOutfit()">
+
                         View More
+
                     </span>
 
                 </div>
+
 
                 <div
                     class="outfit-display-area"
@@ -468,11 +671,15 @@
                 <div class="box-header">
 
                     <h3>
+
                         <i class="fa-solid fa-user"></i>
+
                         Profile Overview
+
                     </h3>
 
                 </div>
+
 
                 <div
                     class="profile-content"
@@ -481,6 +688,7 @@
                     <div class="user-avatar">
                         S
                     </div>
+
 
                     <div class="user-details">
 
@@ -515,7 +723,7 @@
     </main>
 
 </div>
-```
+
 
 <script>
 
@@ -524,15 +732,92 @@
 
 
     /* =========================
+       DATE & TIME
+       ========================= */
+
+    function updateDateTime() {
+
+        const now = new Date();
+
+
+        const dateOptions = {
+
+            timeZone: "Africa/Cairo",
+
+            weekday: "long",
+
+            year: "numeric",
+
+            month: "long",
+
+            day: "numeric"
+
+        };
+
+
+        const timeOptions = {
+
+            timeZone: "Africa/Cairo",
+
+            hour: "2-digit",
+
+            minute: "2-digit",
+
+            second: "2-digit",
+
+            hour12: true
+
+        };
+
+
+        const dateText =
+            new Intl.DateTimeFormat(
+                "en-US",
+                dateOptions
+            ).format(now);
+
+
+        const timeText =
+            new Intl.DateTimeFormat(
+                "en-US",
+                timeOptions
+            ).format(now);
+
+
+        document.getElementById(
+            "current-date"
+        ).textContent = dateText;
+
+
+        document.getElementById(
+            "current-time"
+        ).textContent = timeText;
+
+    }
+
+
+    /* =========================
        START
        ========================= */
 
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
 
-        loadWardrobeItems();
-        loadProfileData();
+            updateDateTime();
 
-    });
+            setInterval(
+                updateDateTime,
+                1000
+            );
+
+
+            loadWardrobeItems();
+
+            loadProfileData();
+
+        }
+    );
 
 
     /* =========================
@@ -542,7 +827,9 @@
     function getItems() {
 
         return JSON.parse(
-            localStorage.getItem("styleDoulabiWardrobe")
+            localStorage.getItem(
+                "styleDoulabiWardrobe"
+            )
         ) || [];
 
     }
@@ -571,9 +858,12 @@
         const items = getItems();
 
         const grid =
-            document.getElementById("wardrobe-grid");
+            document.getElementById(
+                "wardrobe-grid"
+            );
 
         grid.innerHTML = "";
+
 
         if (items.length === 0) {
 
@@ -585,50 +875,53 @@
         }
 
 
-        items.forEach((item, index) => {
+        items.forEach(
+            (item, index) => {
 
-            const img =
-                item.image || DEFAULT_DRESS_IMAGE;
+                const img =
+                    item.image ||
+                    DEFAULT_DRESS_IMAGE;
 
 
-            grid.innerHTML += `
+                grid.innerHTML += `
 
-                <div class="ward-item">
+                    <div class="ward-item">
 
-                    <img
-                        src="${img}"
-                        alt="${item.name}">
+                        <img
+                            src="${img}"
+                            alt="${item.name}">
 
-                    <h4>
-                        ${item.name}
-                    </h4>
+                        <h4>
+                            ${item.name}
+                        </h4>
 
-                    <div class="item-details">
+                        <div class="item-details">
 
-                        <span class="detail-tag category">
-                            ${item.category || "N/A"}
-                        </span>
+                            <span class="detail-tag category">
+                                ${item.category || "N/A"}
+                            </span>
 
-                        <span class="detail-tag color">
-                            ${item.color || "N/A"}
-                        </span>
+                            <span class="detail-tag color">
+                                ${item.color || "N/A"}
+                            </span>
 
-                        <span class="detail-tag season">
-                            ${item.season || "N/A"}
-                        </span>
+                            <span class="detail-tag season">
+                                ${item.season || "N/A"}
+                            </span>
+
+                        </div>
+
+                        <i
+                            class="fa-solid fa-trash delete-icon"
+                            onclick="removeItem(${index})">
+                        </i>
 
                     </div>
 
-                    <i
-                        class="fa-solid fa-trash delete-icon"
-                        onclick="removeItem(${index})">
-                    </i>
+                `;
 
-                </div>
-
-            `;
-
-        });
+            }
+        );
 
     }
 
@@ -643,19 +936,35 @@
 
 
         const name =
-            document.getElementById("iName").value.trim();
+            document
+                .getElementById("iName")
+                .value
+                .trim();
+
 
         const category =
-            document.getElementById("iCategory").value;
+            document.getElementById(
+                "iCategory"
+            ).value;
+
 
         const color =
-            document.getElementById("iColor").value.trim();
+            document
+                .getElementById("iColor")
+                .value
+                .trim();
+
 
         const season =
-            document.getElementById("iSeason").value;
+            document.getElementById(
+                "iSeason"
+            ).value;
+
 
         const imageInput =
-            document.getElementById("iImage");
+            document.getElementById(
+                "iImage"
+            );
 
 
         if (
@@ -665,7 +974,9 @@
             !season
         ) {
 
-            alert("Please fill in all required fields.");
+            alert(
+                "Please fill in all required fields."
+            );
 
             return;
 
@@ -678,7 +989,9 @@
 
         if (!file) {
 
-            alert("Please choose an image.");
+            alert(
+                "Please choose an image."
+            );
 
             return;
 
@@ -689,50 +1002,53 @@
             new FileReader();
 
 
-        reader.onload = function(event) {
+        reader.onload =
+            function(event) {
 
-            const imageData =
-                event.target.result;
-
-
-            const items =
-                getItems();
+                const imageData =
+                    event.target.result;
 
 
-            const newItem = {
+                const items =
+                    getItems();
 
-                name: name,
 
-                category: category,
+                const newItem = {
 
-                color: color,
+                    name: name,
 
-                season: season,
+                    category: category,
 
-                occasion: "casual",
+                    color: color,
 
-                image: imageData
+                    season: season,
+
+                    occasion: "casual",
+
+                    image: imageData
+
+                };
+
+
+                items.push(newItem);
+
+
+                saveItems(items);
+
+
+                document
+                    .getElementById("add-form")
+                    .reset();
+
+
+                loadWardrobeItems();
+
+
+                alert(
+                    "Item added successfully!"
+                );
 
             };
-
-
-            items.push(newItem);
-
-
-            saveItems(items);
-
-
-            document
-                .getElementById("add-form")
-                .reset();
-
-
-            loadWardrobeItems();
-
-
-            alert("Item added successfully!");
-
-        };
 
 
         reader.readAsDataURL(file);
@@ -751,7 +1067,9 @@
 
 
         if (
-            !confirm("Are you sure you want to delete this item?")
+            !confirm(
+                "Are you sure you want to delete this item?"
+            )
         ) {
 
             return;
@@ -793,7 +1111,9 @@
 
 
         const out =
-            document.getElementById("match-out");
+            document.getElementById(
+                "match-out"
+            );
 
 
         if (!color1 || !color2) {
@@ -914,14 +1234,18 @@
 
             match = true;
 
-        } else if (
+        }
+
+        else if (
             matchingColors[color1] &&
             matchingColors[color1].includes(color2)
         ) {
 
             match = true;
 
-        } else if (
+        }
+
+        else if (
             matchingColors[color2] &&
             matchingColors[color2].includes(color1)
         ) {
@@ -947,7 +1271,9 @@
     function getOutfit() {
 
         const area =
-            document.getElementById("outfit-area");
+            document.getElementById(
+                "outfit-area"
+            );
 
 
         area.innerHTML =
@@ -983,21 +1309,27 @@
 
             currentSeason = "Winter";
 
-        } else if (
+        }
+
+        else if (
             currentMonth >= 3 &&
             currentMonth <= 5
         ) {
 
             currentSeason = "Spring";
 
-        } else if (
+        }
+
+        else if (
             currentMonth >= 6 &&
             currentMonth <= 9
         ) {
 
             currentSeason = "Summer";
 
-        } else {
+        }
+
+        else {
 
             currentSeason = "Autumn";
 
@@ -1007,27 +1339,34 @@
         let tops =
             items.filter(
                 item =>
-                    item.category.toLowerCase() === "top"
+                    item.category &&
+                    item.category
+                        .toLowerCase() === "top"
             );
 
 
         let bottoms =
             items.filter(
                 item =>
-                    item.category.toLowerCase() === "bottom"
+                    item.category &&
+                    item.category
+                        .toLowerCase() === "bottom"
             );
 
 
         let shoes =
             items.filter(
                 item =>
-                    item.category.toLowerCase() === "shoes"
+                    item.category &&
+                    item.category
+                        .toLowerCase() === "shoes"
             );
 
 
         const seasonalTops =
             tops.filter(
                 item =>
+                    item.season &&
                     item.season.toLowerCase() ===
                     currentSeason.toLowerCase()
             );
@@ -1036,6 +1375,7 @@
         const seasonalBottoms =
             bottoms.filter(
                 item =>
+                    item.season &&
                     item.season.toLowerCase() ===
                     currentSeason.toLowerCase()
             );
@@ -1044,6 +1384,7 @@
         const seasonalShoes =
             shoes.filter(
                 item =>
+                    item.season &&
                     item.season.toLowerCase() ===
                     currentSeason.toLowerCase()
             );
@@ -1078,15 +1419,27 @@
 
 
         const top =
-            tops[Math.floor(Math.random() * tops.length)];
+            tops[
+                Math.floor(
+                    Math.random() * tops.length
+                )
+            ];
 
 
         const bottom =
-            bottoms[Math.floor(Math.random() * bottoms.length)];
+            bottoms[
+                Math.floor(
+                    Math.random() * bottoms.length
+                )
+            ];
 
 
         const shoe =
-            shoes[Math.floor(Math.random() * shoes.length)];
+            shoes[
+                Math.floor(
+                    Math.random() * shoes.length
+                )
+            ];
 
 
         area.innerHTML = `
@@ -1167,7 +1520,9 @@
 
         const savedProfile =
             JSON.parse(
-                localStorage.getItem("styleDoulabiProfile")
+                localStorage.getItem(
+                    "styleDoulabiProfile"
+                )
             ) || {
 
                 name: "StyleDoulabi User",
@@ -1184,7 +1539,9 @@
 
 
         const profileBox =
-            document.getElementById("profile-box");
+            document.getElementById(
+                "profile-box"
+            );
 
 
         if (!profileBox)
@@ -1207,28 +1564,47 @@
             <div class="user-details">
 
                 <p>
+
                     <strong>Name:</strong>
+
                     ${savedProfile.name}
+
                 </p>
 
+
                 <p>
+
                     <strong>Email:</strong>
+
                     ${savedProfile.email}
+
                 </p>
 
+
                 <p>
+
                     <strong>Age:</strong>
+
                     ${savedProfile.age}
+
                 </p>
 
+
                 <p>
+
                     <strong>Fav Color:</strong>
+
                     ${savedProfile.fav_color}
+
                 </p>
 
+
                 <p>
+
                     <strong>Fav Season:</strong>
+
                     ${savedProfile.fav_season}
+
                 </p>
 
             </div>
@@ -1241,3 +1617,4 @@
 
 </body>
 </html>
+```

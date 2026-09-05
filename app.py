@@ -1,4 +1,6 @@
+
 import os
+import datetime
 
 from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
@@ -192,7 +194,12 @@ def remove_item(name):
 @app.route("/api/weather", methods=["GET"])
 def get_weather():
 
+    # الحصول على التاريخ والوقت الحاليين
+    now = datetime.datetime.now()
+
     return jsonify({
+        "date": now.strftime("%Y-%m-%d"),
+        "time": now.strftime("%I:%M:%S %p"),
         "temperature": my_weather.temperature(),
         "season": my_weather.season()
     })
